@@ -1,0 +1,88 @@
+label {
+  width: 250px;
+  text-align: center;
+  margin: 10px auto;
+  font-family: "Merienda One", cursive;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 600;
+  color: #17a2b8;
+}
+h1,
+h2,
+h3 {
+  text-align: center;
+  color: #5a6275;
+}
+
+h2 {
+  font-size: 35px;
+  margin: 8px auto;
+  font-style: italic;
+}
+h3 {
+  font-size: 35px;
+  font-style: italic;
+  margin: 30px auto;
+}
+
+h4 {
+  font-family: "Poppins", sans-serif;
+  color: #17a2b8;
+  font-weight: bolder;
+  font-style: italic;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.card {
+  position: relative;
+  right: 100px;
+  width: 800px;
+  border-radius: 20px;
+}
+
+.main-image {
+  display: block;
+  margin: 30px auto 0 10px;
+  width: 150px;
+}
+
+.col {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+.col-12 {
+  text-align: center;
+}
+#stick {
+  display: inline;
+}
+
+.col-4 {
+  padding: 0;
+}
+h1,
+.temp {
+  font-size: 70px;
+  color: #5a6275;
+  text-align: center;
+  font-weight: 500;
+}
+.units {
+  font-size: 19px;
+  display: inline;
+  text-decoration: none;
+  position: relative;
+  top: -30px;
+  font-weight: 400;
+}
