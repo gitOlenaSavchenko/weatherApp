@@ -8,6 +8,14 @@ label {
   font-weight: 600;
   color: #17a2b8;
 }
+ul {
+  list-style-type: none;
+  font-size: 30px;
+  margin: 8px auto;
+  font-style: italic;
+  color: #5a6275;
+}
+
 h1,
 h2,
 h3 {
@@ -15,11 +23,6 @@ h3 {
   color: #5a6275;
 }
 
-h2 {
-  font-size: 35px;
-  margin: 8px auto;
-  font-style: italic;
-}
 h3 {
   font-size: 35px;
   font-style: italic;
