@@ -10,36 +10,28 @@ label {
 }
 ul {
   list-style-type: none;
-  font-size: 30px;
+  font-size: 22px;
   margin: 8px auto;
-  font-style: italic;
+  padding-left: 14px;
   color: #5a6275;
 }
-
-h1,
-h2,
-h3 {
+h1 {
+  font-size: 70px;
+  color: #5a6275;
   text-align: center;
-  color: #5a6275;
-}
-
-h3 {
-  font-size: 35px;
-  font-style: italic;
-  margin: 30px auto;
+  font-weight: 500;
 }
 
 h4 {
   font-family: "Poppins", sans-serif;
   color: #17a2b8;
   font-weight: bolder;
-  font-style: italic;
 }
 a {
   text-decoration: none;
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: black;
 }
 p.gitlink {
@@ -70,26 +62,24 @@ p.gitlink {
 }
 .col-12 {
   text-align: center;
-}
-#stick {
-  display: inline;
+  margin-top: 15px;
 }
 
-.col-4 {
-  padding: 0;
+#temperature {
+  display: inline;
 }
-h1,
-.temp {
-  font-size: 70px;
-  color: #5a6275;
+.col-4 {
   text-align: center;
-  font-weight: 500;
+}
+#details {
+  text-align: left;
+  padding-left: 35px;
 }
 .units {
   font-size: 19px;
-  display: inline;
+
   text-decoration: none;
   position: relative;
-  top: -30px;
+  top: -34px;
   font-weight: 400;
 }
