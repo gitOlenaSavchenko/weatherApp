@@ -39,6 +39,15 @@ function showCityWeather(event) {
     document.querySelector("#wind").innerHTML = Math.round(
       response.data.wind.speed
     );
+    document
+      .querySelector("#icon")
+      .setAttribute(
+        "src",
+        `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      );
+    document
+      .querySelector("#icon")
+      .setAttribute("alt", response.data.weather[0].description);
   }
   axios.get(apiUrl).then(showTemperature);
 }
@@ -57,6 +66,15 @@ function showLocalWeather() {
     document.querySelector("#wind").innerHTML = Math.round(
       response.data.wind.speed
     );
+    document
+      .querySelector("#icon")
+      .setAttribute(
+        "src",
+        `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      );
+    document
+      .querySelector("#icon")
+      .setAttribute("alt", response.data.weather[0].description);
   }
   function showPosition(position) {
     let lat = position.coords.latitude;
