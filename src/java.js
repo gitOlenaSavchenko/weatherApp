@@ -35,6 +35,10 @@ function showCityWeather(event) {
     document.querySelector("#description").innerHTML =
       response.data.weather[0].description;
     document.querySelector("#city").innerHTML = response.data.name;
+    document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+    document.querySelector("#wind").innerHTML = Math.round(
+      response.data.wind.speed
+    );
   }
   axios.get(apiUrl).then(showTemperature);
 }
@@ -43,16 +47,16 @@ cityWeatherSearch.addEventListener("submit", showCityWeather);
 
 function showLocalWeather() {
   function showLocalTemperature(response) {
-    let temperature = Math.round(response.data.main.temp);
-    let city = response.data.name;
-    let description = response.data.weather[0].description;
-    console.log(`${temperature}°C and ${description}`);
-    let h1 = document.querySelector("h1");
-    h1.innerHTML = city;
-    let localTemp = document.querySelector("#temperature");
-    localTemp.innerHTML = temperature;
-    let localDescr = document.querySelector("#description");
-    localDescr.innerHTML = description;
+    document.querySelector("#temperature").innerHTML = Math.round(
+      response.data.main.temp
+    );
+    document.querySelector("#description").innerHTML =
+      response.data.weather[0].description;
+    document.querySelector("#city").innerHTML = response.data.name;
+    document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+    document.querySelector("#wind").innerHTML = Math.round(
+      response.data.wind.speed
+    );
   }
   function showPosition(position) {
     let lat = position.coords.latitude;
