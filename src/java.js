@@ -23,34 +23,40 @@ function showDate() {
   dateHeading.innerHTML = `${time}`;
 }
 
-function showCityWeather(event) {
-  event.preventDefault();
-  let city = document.querySelector("#search").value;
+function showTemperature(response) {
+  document.querySelector("#temperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].description;
+  document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  document
+    .querySelector("#icon")
+    .setAttribute("alt", response.data.weather[0].description);
+}
+
+function search(city) {
   let apiKey = "b9ba0314a93083136d968577c718e31d";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  function showTemperature(response) {
-    document.querySelector("#temperature").innerHTML = Math.round(
-      response.data.main.temp
-    );
-    document.querySelector("#description").innerHTML =
-      response.data.weather[0].description;
-    document.querySelector("#city").innerHTML = response.data.name;
-    document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-    document.querySelector("#wind").innerHTML = Math.round(
-      response.data.wind.speed
-    );
-    document
-      .querySelector("#icon")
-      .setAttribute(
-        "src",
-        `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-      );
-    document
-      .querySelector("#icon")
-      .setAttribute("alt", response.data.weather[0].description);
-  }
   axios.get(apiUrl).then(showTemperature);
 }
+
+function showCityWeather(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#search");
+  search(cityInput.value);
+}
+
 let cityWeatherSearch = document.querySelector(".input-group");
 cityWeatherSearch.addEventListener("submit", showCityWeather);
 
@@ -92,4 +98,4 @@ function showLocalWeather() {
 let localWeatherCheck = document.querySelector("#button-local");
 localWeatherCheck.addEventListener("click", showLocalWeather);
 showDate();
-showLocalWeather();
+search("Kyiv");
