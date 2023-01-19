@@ -61,27 +61,6 @@ let cityWeatherSearch = document.querySelector(".input-group");
 cityWeatherSearch.addEventListener("submit", showCityWeather);
 
 function showLocalWeather() {
-  function showLocalTemperature(response) {
-    document.querySelector("#temperature").innerHTML = Math.round(
-      response.data.main.temp
-    );
-    document.querySelector("#description").innerHTML =
-      response.data.weather[0].description;
-    document.querySelector("#city").innerHTML = response.data.name;
-    document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-    document.querySelector("#wind").innerHTML = Math.round(
-      response.data.wind.speed
-    );
-    document
-      .querySelector("#icon")
-      .setAttribute(
-        "src",
-        `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-      );
-    document
-      .querySelector("#icon")
-      .setAttribute("alt", response.data.weather[0].description);
-  }
   function showPosition(position) {
     let lat = position.coords.latitude;
     let lon = position.coords.longitude;
@@ -89,7 +68,7 @@ function showLocalWeather() {
     console.log(lon);
     let apiKey = "b9ba0314a93083136d968577c718e31d";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(showLocalTemperature);
+    axios.get(apiUrl).then(showTemperature);
   }
   navigator.geolocation.getCurrentPosition(showPosition);
   showDate();
