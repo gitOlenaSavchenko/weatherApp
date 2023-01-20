@@ -12,10 +12,10 @@ function showDate() {
   let day = days[date.getDay()];
   let hour = [date.getHours()];
   let minutes = [date.getMinutes()];
-  if (minutes < 9) {
+  if (minutes <= 9) {
     minutes = `0${minutes}`;
   }
-  if (hour < 9) {
+  if (hour <= 9) {
     hour = `0${hour}`;
   }
   let time = `${day}, ${hour}:${minutes}`;
