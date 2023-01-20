@@ -36,8 +36,13 @@ a {
 }
 a:hover {
   text-decoration: none;
-  color: black;
+  color: #5a6275;
+  cursor: default;
 }
+.active {
+  color: #5a6275;
+}
+
 p.gitlink {
   position: relative;
   left: -75px;

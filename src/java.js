@@ -24,6 +24,7 @@ function showDate() {
 }
 
 function showTemperature(response) {
+  celsiusTemp = response.data.main.temp;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -73,6 +74,31 @@ function showLocalWeather() {
   navigator.geolocation.getCurrentPosition(showPosition);
   showDate();
 }
+
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemp);
+
+let celsiusTemp = null;
 
 let localWeatherCheck = document.querySelector("#button-local");
 localWeatherCheck.addEventListener("click", showLocalWeather);
