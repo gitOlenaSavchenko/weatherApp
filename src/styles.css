@@ -58,14 +58,13 @@ p.gitlink {
   width: 800px;
   border-radius: 20px;
 }
-
-.main-image {
-  display: block;
+#icon {
+  width: 120px;
   margin: 30px auto 0 10px;
-  width: 150px;
+  display: block;
 }
 
-.col {
+.col-2 {
   font-family: "Poppins", sans-serif;
   text-align: center;
 }
@@ -91,7 +90,22 @@ p.gitlink {
   top: -34px;
   font-weight: 400;
 }
-#icon {
-  width: 120px;
-  margin: 35px auto 25px 2px;
+.weather-forecast-date {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+
+  line-height: 1.2;
+  font-size: 20px;
+}
+.weather-forecast-temp {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.day {
+  font-weight: 700;
+}
+.night {
+  font-weight: 600;
+  opacity: 70%;
 }
