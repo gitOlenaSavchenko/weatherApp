@@ -23,6 +23,26 @@ function showDate() {
   dateHeading.innerHTML = `${time}`;
 }
 
+function displayForecast() {
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+              <div class="weather-forecast-date">${day}</div>
+              <img src="images/icons8-partly-cloudy-day-48.png" alt="icons8" />
+              <div class="weather-forecast-temp">
+                <span class="day">20°</span> <span class="night">17°</span>
+              </div>
+            </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showTemperature(response) {
   celsiusTemp = response.data.main.temp;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -104,3 +124,4 @@ let localWeatherCheck = document.querySelector("#button-local");
 localWeatherCheck.addEventListener("click", showLocalWeather);
 showDate();
 search("Kyiv");
+displayForecast();
