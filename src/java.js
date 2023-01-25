@@ -114,8 +114,6 @@ function showLocalWeather() {
   function showPosition(position) {
     let lat = position.coords.latitude;
     let lon = position.coords.longitude;
-    console.log(lat);
-    console.log(lon);
     let apiKey = "b9ba0314a93083136d968577c718e31d";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(showTemperature);
@@ -123,31 +121,6 @@ function showLocalWeather() {
   navigator.geolocation.getCurrentPosition(showPosition);
   showDate();
 }
-
-function displayFahrenheitTemp(event) {
-  event.preventDefault();
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let temperatureElement = document.querySelector("#temperature");
-  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
-}
-
-function displayCelsiusTemp(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemp);
-}
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemp);
-
-let celsiusTemp = null;
 
 let localWeatherCheck = document.querySelector("#button-local");
 localWeatherCheck.addEventListener("click", showLocalWeather);
