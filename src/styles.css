@@ -8,6 +8,7 @@ label {
   font-weight: 600;
   color: #17a2b8;
 }
+
 ul {
   list-style-type: none;
   font-size: 22px;
@@ -55,8 +56,10 @@ p.gitlink {
 .card {
   position: relative;
   right: 100px;
-  width: 800px;
+  width: 900px;
   border-radius: 20px;
+  background: linear-gradient(211deg, #b2e5e559 8.54%, #ad9cd7 95.04%);
+  border-color: white;
 }
 #icon {
   width: 120px;
@@ -76,9 +79,7 @@ p.gitlink {
 #temperature {
   display: inline;
 }
-.col-4 {
-  text-align: center;
-}
+
 #details {
   text-align: left;
   padding-left: 35px;
@@ -93,6 +94,7 @@ p.gitlink {
 .weather-forecast-date {
   margin-top: 0;
   margin-bottom: 0.5rem;
+  color: #5a6275;
 
   line-height: 1.2;
   font-size: 20px;
