@@ -91,6 +91,10 @@ p.gitlink {
   top: -34px;
   font-weight: 400;
 }
+
+.weather-forecast {
+  margin-top: 40px;
+}
 .weather-forecast-date {
   margin-top: 0;
   margin-bottom: 0.5rem;
