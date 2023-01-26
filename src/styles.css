@@ -37,6 +37,13 @@ a:hover {
   color: #5a6275;
   cursor: default;
 }
+#city-input::placeholder {
+  color: #b2a5d3;
+}
+
+#city-input:focus::placeholder {
+  color: transparent;
+}
 .active {
   color: #5a6275;
 }
@@ -60,7 +67,7 @@ p.gitlink {
 }
 #icon {
   width: 120px;
-  margin: 30px auto 0 10px;
+  margin: 30px auto 0 2px;
   display: block;
 }
 
