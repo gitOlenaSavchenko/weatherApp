@@ -1,15 +1,5 @@
-label {
-  width: 250px;
-  text-align: center;
-  margin: 10px auto;
-  font-family: "Merienda One", cursive;
-  font-size: 25px;
-  font-style: italic;
-  font-weight: 600;
-  color: #17a2b8;
-}
 input {
-  width: 500px;
+  margin: 20px 20px;
 }
 
 ul {
@@ -23,7 +13,7 @@ li:first-letter {
   text-transform: capitalize;
 }
 h1 {
-  font-size: 70px;
+  font-size: 60px;
   color: #5a6275;
   text-align: left;
   font-weight: 500;
@@ -61,7 +51,6 @@ p.gitlink {
 
 .card {
   margin: 0 auto;
-
   width: 800px;
   border-radius: 20px;
   background: linear-gradient(211deg, #b2e5e559 8.54%, #ad9cd7 95.04%);
@@ -121,4 +110,26 @@ p.gitlink {
 .night {
   font-weight: 600;
   opacity: 70%;
+}
+
+.form-control {
+  margin-left: 20px;
+  width: 450px;
+}
+.btn {
+  position: relative;
+  right: 40px;
+}
+
+#button-local {
+  background: #b2a5d3;
+  border: none;
+}
+#button-search {
+  background: #87c8e6;
+  border: none;
+}
+
+#city-input {
+  border: none;
 }

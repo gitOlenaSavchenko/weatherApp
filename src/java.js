@@ -101,14 +101,14 @@ function search(city) {
   axios.get(apiUrl).then(showTemperature);
 }
 
-function showCityWeather(event) {
+function handleSubmit(event) {
   event.preventDefault();
-  let cityInput = document.querySelector("#search");
-  search(cityInput.value);
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
 }
 
-let cityWeatherSearch = document.querySelector(".input-group");
-cityWeatherSearch.addEventListener("submit", showCityWeather);
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
 
 function showLocalWeather() {
   function showPosition(position) {
