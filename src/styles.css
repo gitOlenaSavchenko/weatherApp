@@ -30,6 +30,7 @@ button {
 }
 a {
   text-decoration: none;
+  color: #b2a5d3;
 }
 a:hover {
   text-decoration: none;
@@ -42,8 +43,9 @@ a:hover {
 
 p.gitlink {
   position: relative;
-  left: -75px;
-  margin-top: 20px;
+  left: 170px;
+  margin-top: 10px;
+  font-size: 13px;
 }
 .container {
   margin-top: 20px;
