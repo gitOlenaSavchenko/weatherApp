@@ -8,6 +8,9 @@ label {
   font-weight: 600;
   color: #17a2b8;
 }
+input {
+  width: 500px;
+}
 
 ul {
   list-style-type: none;
@@ -32,6 +35,9 @@ h4 {
   color: #17a2b8;
   font-weight: bolder;
 }
+button {
+  margin-left: 50px;
+}
 a {
   text-decoration: none;
 }
@@ -54,9 +60,9 @@ p.gitlink {
 }
 
 .card {
-  position: relative;
-  right: 100px;
-  width: 900px;
+  margin: 0 auto;
+
+  width: 800px;
   border-radius: 20px;
   background: linear-gradient(211deg, #b2e5e559 8.54%, #ad9cd7 95.04%);
   border-color: white;
