@@ -66,7 +66,7 @@ p.gitlink {
 }
 #icon {
   width: 120px;
-  margin: 30px auto 0 2px;
+  margin: 20px auto 0 2px;
   display: block;
 }
 
@@ -81,6 +81,14 @@ p.gitlink {
 
 #temperature {
   display: inline;
+  margin-left: 15px;
+}
+
+#city {
+  margin-left: 15px;
+}
+
+#date-description {
   margin-left: 15px;
 }
 
@@ -122,8 +130,8 @@ p.gitlink {
 }
 
 .form-control {
-  margin-left: 20px;
-  width: 450px;
+  margin-left: 25px;
+  width: 445px;
 }
 .btn {
   position: relative;
